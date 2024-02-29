@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu principal.master.cs" Inherits="Primer_proyecto_wed_Grupo_3.Menu_principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Menu principal</title>
+    <link href="Content/Estilo-de-menu-principal.css" rel="stylesheet" />
+       
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <style>
+       body{
+           background-image:url(images/b2.jpg);
+           background-size:cover;
+           background-attachment:fixed;
+           width: 100%;
+           height: 180%;
+       }
+       .auto-style1 {
+           width: 100%;
+       }
+       .auto-style2 {
+           height: 26px;
+       }
+       .auto-style5 {
+           text-align: center;
+       }
+   </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav>
+                <div id="logo">
+                    <img src="images/pampena.jpg" width="200px" />
+                    <label class="toggle" for="drop">Menu</label>
+                    <input type="checkbox" id="drop" />
+                </div>
+                <ul class="Menu">
+                     <li><a href="Menu principal.aspx">Inicio</a></li>
+                    <li><a href="Tabla_menu.aspx">Menu</a></li>
+                     <li><a href="#">Consultas</a>
+                                 <ul>
+                                     <li><a href="Tabla_usuario.aspx">Usuarios</a></li>
+                                     <li><a href="Tabla_empleado.aspx">Empleados</a></li>
+                                 </ul>
+                             </li>
+                     <li><a href="#">Agregar</a>
+                        <ul>
+                              <li><a href="Agregar_usuarios.aspx">Agregar usuarios</a></li>
+                              <li><a href="Agregar_empleados.aspx">Agregar empleados</a></li>                          
+                        </ul>
+                    </li>                                 
+                    <li><a href="#">Otros</a>
+                        <ul>
+                            <li><a href="politicas.aspx">Politicas</a></li>
+                            <li><a href="Acerca-de.aspx">Acerca de</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Ayuda.aspx">Ayuda</a></li>
+                    <li><a href="Cerrar_sesion.aspx">Cerrar Sesion</a></li>
+                    
+                </ul>
+            </nav>     
+             
+        </div>
+        <table class="auto-style1">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                            &nbsp;</p>
+                    </asp:ContentPlaceHolder>
+                    <footer class="auto-style5">
+                        <a href="http://www.copyscape.com/"><img src="//banners.copyscape.com/img/copyscape-seal-white-120x100.png" width="120" height="100" border="0" alt="Protected by Copyscape" title="Protected by Copyscape - Do not copy content from this page." /></a>
+   <div class="copyright" align="center">
+  <script>
+    document.write('&copy;' );
+    document.write(' 2021 - ');
+    document.write(new Date().getFullYear());
+    document.write(' Lapanpeña.com  - All Rights Reserved.');
+    document.write('<br/>Last Updated : ');
+    document.write(document.lastModified);
+  </script>
+</div>
+
+            </footer>
+                </td>              
+            </tr>
+           
+        </table>
+    </form> 
+</body>
+</html>
